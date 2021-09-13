@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
 import { auth, provider } from "../firebase";
 import {
   selectUserName,
   selectUserPhoto,
-  selectUserToken,
+  // selectUserToken,
   setUserLoginDetails,
   setUserToken,
   setSignOutState,
@@ -16,7 +16,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const userName = useSelector(selectUserName);
-  const userToken = useSelector(selectUserToken);
+  // const userToken = useSelector(selectUserToken);
   const userPhoto = useSelector(selectUserPhoto);
 
   // useEffect(() => {
