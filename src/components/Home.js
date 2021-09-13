@@ -25,21 +25,26 @@ const Home = () => {
         "https://disneyplus-clone-a180a-default-rtdb.firebaseio.com/movies.json"
       );
       const movies = result.data;
+      // eslint-disable-next-line array-callback-return
       movies.map((movie, key) => {
         switch (movie.type) {
           case "recommend":
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             recommends = [...recommends, { id: key, ...movie }];
             break;
 
           case "new":
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             newDisneys = [...newDisneys, { id: key, ...movie }];
             break;
 
           case "original":
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             originals = [...originals, { id: key, ...movie }];
             break;
 
           case "trending":
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             trending = [...trending, { id: key, ...movie }];
             break;
           default:
