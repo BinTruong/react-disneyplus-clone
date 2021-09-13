@@ -19,12 +19,12 @@ const Header = () => {
   const userToken = useSelector(selectUserToken);
   const userPhoto = useSelector(selectUserPhoto);
 
-  useEffect(() => {
-    const isLogin = !!userToken;
-    if (isLogin) {
-      history.push("/home");
-    }
-  }, [userToken, history]);
+  // useEffect(() => {
+  //   const isLogin = !!userToken;
+  //   if (isLogin) {
+  //     history.push("/home");
+  //   }
+  // }, [userToken, history]);
 
   const handleAuth = () => {
     if (!userName) {

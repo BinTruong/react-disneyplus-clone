@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Detail from "./components/Detail";
 import ProtectedRoute from "./routes/ProtectRoute";
+import ValidRoute from "./routes/ValidRoute";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <ProtectedRoute component={Login} />
+            <ValidRoute component={Login} />
             {/* <Login /> */}
           </Route>
           <Route path="/home">

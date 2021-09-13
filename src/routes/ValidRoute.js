@@ -6,7 +6,7 @@ const ValidRoute = ({ component: Component }) => {
   const history = useHistory();
   const { token } = useSelector((state) => state.user);
   const isLogin = !!token;
-  if (!isLogin) {
+  if (isLogin) {
     history.push("/home");
   }
   return <Component />;
